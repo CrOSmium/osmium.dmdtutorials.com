@@ -1,202 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>CrOSmium</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="images/OSmium.png">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
---p:#4CAF50;
---s:#69F0AE;
---sf:#121212;
---sfv:#1E1E1E;
---t:#E6E6E6;
---o:#3A3A3A;
---r:18px;
---spd:.32s;
-}
-html{scroll-behavior:smooth;}
-body{
-font-family:"Roboto",sans-serif;
-background:var(--sf);
-color:var(--t);
-display:flex;
-flex-direction:column;
-min-height:100vh;
-animation:fadeIn var(--spd) ease-out forwards;
-margin:0;
-padding:0;
-}
-.link-span {
-  display: inline-block; 
-  text-decoration: none; 
-  color: inherit; 
-  cursor: pointer;
-}
-@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
-::-webkit-scrollbar{width:15px}
-::-webkit-scrollbar-track{background:#141414}
-::-webkit-scrollbar-thumb{background:#646464}
-::-webkit-scrollbar-thumb:hover{background:#B2B2B2}
-header{
-height:48px;
-display:flex;
-align-items:center;
-padding:0 16px;
-background:var(--sfv);
-border-bottom:1px solid var(--o);
--webkit-app-region:drag;
-backdrop-filter:blur(12px);
-position:sticky;
-top:0;
-z-index:10;
-}
-main{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:flex-start;
-text-align:center;
-padding:24px;
-gap:12px;
-margin-top:24px;
-}
-.logo{
-width:120px;
-height:120px;
-border-radius:50%;
-animation:bounceIn .6s cubic-bezier(.24,1.4,.34,1);
-}
-@keyframes bounceIn{
-0%{opacity:0;transform:scale(.4)}
-60%{opacity:1;transform:scale(1.15)}
-100%{transform:scale(1)}
-}
-h1{font-size:44px;font-weight:700;animation:float 4s ease-in-out infinite}
-@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
-.description{max-width:650px;font-size:18px;font-weight:300;opacity:.8}
-h2{margin-top:32px;font-size:26px;font-weight:600}
-.members-area, .card-area{
-display:flex;
-gap:24px;
-margin-top:24px;
-flex-wrap:wrap;
-justify-content:center;
-animation:flowIn .7s cubic-bezier(.25,1,.3,1) forwards;
-opacity:0;
-transform:scale(.9);
-}
-@keyframes flowIn{
-0%{opacity:0;transform:scale(.9)}
-100%{opacity:1;transform:scale(1)}
-}
-.member, .card{
-background:var(--sfv);
-padding:24px;
-border-radius:var(--r);
-width:240px;
-border:1px solid var(--o);
-transition:transform .25s cubic-bezier(.2,1,.22,1),box-shadow .25s ease;
-cursor:pointer;
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-gap:8px;
-}
-.member:hover, .card:hover{
-transform:translateY(-10px) scale(1.03);
-box-shadow:0 14px 28px rgba(0,0,0,.35);
-}
-.card-icon, .member-icon{
-font-size:36px;
-color:var(--p);
-transition:.25s;
-}
-.card:hover .card-icon, .member:hover .member-icon{transform:rotate(8deg) scale(1.1)}
-.card-title, .member-title{font-weight:600;font-size:18px}
-.card-text, .member-text{font-size:14px;opacity:.8;text-align:left;}
-footer{
-text-align:center;
-padding:16px;
-opacity:.6;
-animation:fadeFooter 1s ease-in-out forwards;
-}
-@keyframes fadeFooter{0%{opacity:0}100%{opacity:.6}}
-</style>
-</head>
-
-<body>
-
-<main>
-<img class="logo" src="images/OSmium.png" alt="OSmium Logo">
-<h1>CrOSmium</h1>
-<p class="description" style="font-style:italic">
-"the dev group to look to when you're tired of f***ing up manually using utilities." – dmd
-</p>
-<p class="description">
-[essencially, we make skidding easier]
-</p>
-<h2>What do we do?</h2>
-<p class="description" style="max-width:700px">
-We build tools and utilities that make messing with your devices easier, 
-without you having to, well… do anything yourself 
-(or look to AI <b>[ew, vibecoding]</b>).<br><br>
-We have a primary focus on ChromeOS and Chromebooks, but we are willing to branch out and make stuff for other platforms!! (ChromeOS is just a starting point for OSmium and we plan to go further in making our utilities outside of it someday!)
-</p>
-
-<h2>Members</h2>
-<div class="members-area">
-<a href="https://github.com/DMDCR" target="_blank" class=link-span>
-<div class="member">
-<span class="material-symbols-rounded member-icon">person</span>
-<div class="member-title">DMD (DMDCR)</div>
-<div class="member-text">Lead Developer & Founder</div>
-</div>
-    </a>
-    <a href="https://github.com/femtynl" target="_blank" class=link-span>
-
-<div class="member">
-<span class="material-symbols-rounded member-icon">person</span>
-<div class="member-title">Femtynl</div>
-<div class="member-text">Developer & Tester</div>
-</div>
+  <head>
+    <meta charset="UTF-8">
+    <title>CrOSmium</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/OSmium.png">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="images/OSmium.png" alt="OSmium Logo">
+      <h1>CrOSmium</h1>
+      <p class="description" style="font-style:italic">
+        "the dev group to look to when you're tired of f***ing up manually using utilities." – dmd
+      </p>
+      <p class="description">
+        [essencially, we make skidding easier]
+      </p>
+      <h2>What do we do?</h2>
+      <p class="description" style="max-width:700px">
+        We build tools and utilities that make messing with your devices easier, 
+        without you having to, well… do anything yourself 
+        (or look to AI <b>[ew, vibecoding]</b>).<br><br>
+        We have a primary focus on ChromeOS and Chromebooks, but we are willing to branch out and make stuff for other platforms!! (ChromeOS is just a starting point for OSmium and we plan to go further in making our utilities outside of it someday!)
+      </p>
+      <h2>Members</h2>
+      <div class="members-area">
+        <a href="https://github.com/DMDCR" target="_blank" class=link-span>
+          <div class="member">
+            <span class="material-symbols-rounded member-icon">person</span>
+            <div class="member-title">DMD (DMDCR)</div>
+            <div class="member-text">Lead Developer & Founder</div>
+          </div>
         </a>
-<div class="member">
-<span class="material-symbols-rounded member-icon">person</span>
-<div class="member-title">Zyro</div>
-<div class="member-text">Emotional Support</div>
-</div>
-</div>
-
-<h2>Projects</h2>
-    
-<div class="card-area">
-<a href="https://github.com/CrOSmium/cr3nroll" target="_blank" class=link-span>
-<div class="card" data-icon="domain_add">
-<span class="material-symbols-rounded card-icon">domain_add</span>
-<div class="card-title">Cr3nroll</div>
-<div class="card-text"> [ UNRELEASED ] A simple ChromeOS Enrollment manager</div>
-</div>
-</a>
-    
-<div class="card" data-icon="construction">
-<span class="material-symbols-rounded card-icon">construction</span>
-<div class="card-title">Still nothing…</div>
-<div class="card-text">Just imagine something cool here.</div>
-</div>
-
-<div class="card" data-icon="handyman">
-<span class="material-symbols-rounded card-icon">handyman</span>
-<div class="card-title">Nothin' :P</div>
-<div class="card-text">One day, I'm gonna grow wings.. or something..</div>
-</div>
-</div>
-</main>
-
-<footer>© 2025 CrOSmium (dmdtutorials.com, crosmium.dev)</footer>
-</body>
+        <a href="https://github.com/femtynl" target="_blank" class=link-span>
+          <div class="member">
+            <span class="material-symbols-rounded member-icon">person</span>
+            <div class="member-title">Femtynl</div>
+            <div class="member-text">Developer & Tester</div>
+          </div>
+        </a>
+        <div class="member">
+          <span class="material-symbols-rounded member-icon">person</span>
+          <div class="member-title">Zyro</div>
+          <div class="member-text">Emotional Support</div>
+        </div>
+      </div>
+      <h2>Projects</h2>
+      <div class="card-area">
+        <a href="https://github.com/CrOSmium/cr3nroll" target="_blank" class=link-span>
+          <div class="card" data-icon="domain_add">
+            <span class="material-symbols-rounded card-icon">domain_add</span>
+            <div class="card-title">Cr3nroll</div>
+            <div class="card-text"> [ UNRELEASED ] A simple ChromeOS Enrollment manager</div>
+          </div>
+        </a>
+        <div class="card" data-icon="construction">
+          <span class="material-symbols-rounded card-icon">construction</span>
+          <div class="card-title">Still nothing…</div>
+          <div class="card-text">Just imagine something cool here.</div>
+        </div>
+        <div class="card" data-icon="handyman">
+          <span class="material-symbols-rounded card-icon">handyman</span>
+          <div class="card-title">Nothin' :P</div>
+          <div class="card-text">One day, I'm gonna grow wings.. or something..</div>
+        </div>
+      </div>
+    </main>
+    <footer>© 2025 CrOSmium (dmdtutorials.com, crosmium.dev)</footer>
+  </body>
 </html>
